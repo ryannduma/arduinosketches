@@ -23,19 +23,19 @@ void loop()
 
   resval = analogRead(respin); // Read data from analog pin and store it to resval variable
 
-  if (resval <= 100)
+  if (resval <= 250)
   {
     lcd.println("Empty ");
   }
-  else if (resval > 100 && resval <= 300)
+  else if (resval > 300 && resval <= 400) // i guess for the future its worth noting these values will change with mineral content of the water so how do you mitigate for that?
   {
     lcd.println("Low ");
   }
-  else if (resval > 300 && resval <= 330)
+  else if (resval > 400 && resval <= 420)
   {
     lcd.println("Medium ");
   }
-  else if (resval > 330)
+  else if (resval > 420)
   {
     lcd.println("High            ");
   }
